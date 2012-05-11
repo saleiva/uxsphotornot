@@ -1,0 +1,8 @@
+{
+  "name": "harvester2",
+  "version": "0.0.1",
+  "dependencies": {
+    "oauth": ">0",
+    "ntwitter": ">0"
+  }
+}
