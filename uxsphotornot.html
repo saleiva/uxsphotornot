@@ -1,0 +1,40 @@
+<head>
+  <title>#UXSP hot or not!</title>
+</head>
+
+<body>
+  <div class='wrap'>
+    <div class='head'>
+      <div id='saleiva'></div>
+      <div id='mamuso'></div>
+      <div id='bomberstudios'></div>
+    </div>
+    <h1>#uxsphotornot</h1>
+		{{> speakerlist}}
+	</div>
+</body>
+
+<template name="speakerlist">
+  <ul class='speakers'>
+    {{#each speakers}}
+      {{> speaker}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="speaker">
+	<li>
+		<img src="/images/people/{{img}}.png" alt="{{speaker}}">
+		<h2>{{speaker}}</h2>
+    <div class='ponencia'>
+      Nos habló de
+      <div class='titulo'>"{{talk}}"</div>
+      el
+      <div class='fecha'>{{date}} a las {{from}}</div>
+    </div>
+    <div class='hotness'>
+      60%
+      <div class='wat'>#hot, 438743 tweets</div>
+    </div>
+	</li>
+</template>
