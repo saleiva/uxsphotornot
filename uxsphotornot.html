@@ -1,0 +1,24 @@
+<head>
+  <title>#UXSP hot or not!</title>
+</head>
+
+<body>
+	{{> speakerlist}}
+</body>
+
+<template name="speakerlist">
+  <ul>
+    {{#each speakers}}
+      {{> speaker}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="speaker">
+	<li>
+		{{img}}
+		<img src="/img/people/{{img}}.png" alt="{{speaker}}">
+	  <strong class="name">{{speaker}}</strong>
+	  <span>{{talk}}</span>
+	</li>
+</template>

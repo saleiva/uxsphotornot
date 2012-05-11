@@ -1,0 +1,14 @@
+html { height: 100%; }
+
+body {
+	padding: 15px;
+	background: #E8E9EC;
+	background: -moz-radial-gradient(center, circle cover, #FFFFFF 0, #E8E9EC 80%);
+	background: -webkit-radial-gradient(center, circle cover, #FFFFFF 0, #E8E9EC 80%);
+	background: radial-gradient(center, circle cover, #FFFFFF 0, #E8E9EC 80%);
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 15px;
+	color: #666666;
+}
