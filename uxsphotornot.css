@@ -98,11 +98,11 @@ h1 {
   font-style: italic;
 }
 .speakers .hotness .index {
-  background: transparent url(/images/minifleim.png) right 9px no-repeat;
+  background: transparent url(/images/minifleim.png) right 1px no-repeat;
   padding-right: 15px;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 20px;
   color: #fe0e0e;
 }
 
