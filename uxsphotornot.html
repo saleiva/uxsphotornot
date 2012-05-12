@@ -29,18 +29,20 @@
 
 <template name="speaker">
   <li>
-		{{counter}}
+    {{counter}}
     <img src="/images/people/{{img}}.png" alt="{{speaker}}">
-    <h2>{{speaker}}</h2>
-    <div class='ponencia'>
-      Nos habló de
-      <div class='titulo'>"{{talk}}"</div>
-      el
-      <div class='fecha'>{{date}} a las {{from}}</div>
-    </div>
-    <div class='hotness'>
-      60%
-      <div class='wat'>#hot, 438743 tweets</div>
+    <div class="container">
+      <h2>{{speaker}}</h2>
+      <div class='ponencia'>
+        Nos habló de
+        <div class='titulo'>"{{talk}}"</div>
+        el
+        <div class='fecha'>{{date}} a las {{from}}</div>
+      </div>
+      <div class='hotness'>
+        <span class="index">60</span>
+        <div class='wat'>12345 tweets, 12345 eran "#hot"</div>
+      </div>
     </div>
   </li>
 </template>

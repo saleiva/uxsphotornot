@@ -6,17 +6,16 @@ body {
 }
 
 .wrap {
-  width: 40em;
+  width: 600px;
   margin: 0 auto;
 }
 
 h1 {
-  font-weight: 800;
-  text-align: center;
-  color: #b1b1bc;
-  text-shadow: 0 1px 1px #fff;
-  background: transparent url(/images/logo_ux.png) left center no-repeat;
-  text-align: right;
+  background: transparent url(/images/header.png) center center no-repeat;
+  overflow: hidden;
+  text-indent: -9000em;
+  padding: 0.3em 0;
+  margin-bottom: 1em;
 }
 
 .head {
@@ -49,21 +48,32 @@ h1 {
   padding: 0;
 }
 .speakers li {
-  margin: 0 0 3em 0;
+  margin: 0 0 2em 0;
   padding: 0;
+  position: relative;
+  padding: 1em 0 2em 1em;
 }
 .speakers img {
-  float: left;
   padding: 4px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.4) 0 2px 5px;
   width: 120px;
   height: 120px;
   margin: 0 1em 0 0;
+  -moz-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  display: block;
+  float: left;
+}
+.speakers .container {
+  display: inline-block;
+  width: 370px;
 }
 .speakers h2 {
   margin: 0;
   padding: 0;
+  line-height: 1.2em;
+  margin-bottom: 5px;
 }
 .speakers .ponencia {
   font-size: 0.8em;
@@ -76,13 +86,24 @@ h1 {
   font-weight: 800;
   font-size: 3em;
   line-height: 1em;
-  color: #ff4000;
+  color: #ff0000;
   text-shadow: #fff 0 1px 0;
+  display: inline-block;
 }
 .speakers .hotness .wat {
-  font-size: 1rem;
+  font-size: 12px;
   line-height: 1em;
-  color: #444;
+  color: #666;
+  font-weight: 400;
+  font-style: italic;
+}
+.speakers .hotness .index {
+  background: transparent url(/images/minifleim.png) right 9px no-repeat;
+  padding-right: 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fe0e0e;
 }
 
 .futer {
