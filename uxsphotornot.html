@@ -10,8 +10,13 @@
       <div id='bomberstudios'></div>
     </div>
     <h1>#uxsphotornot</h1>
-		{{> speakerlist}}
-	</div>
+    {{> speakerlist}}
+    <div class='futer'>
+      <img src="images/troll.png" />
+      <br />
+      © 2012 "Si las ponencias fueran más entretenidas no estaríamos aquí delinquiendo, S.L."
+    </div>
+  </div>
 </body>
 
 <template name="speakerlist">
@@ -23,9 +28,9 @@
 </template>
 
 <template name="speaker">
-	<li>
-		<img src="/images/people/{{img}}.png" alt="{{speaker}}">
-		<h2>{{speaker}}</h2>
+  <li>
+    <img src="/images/people/{{img}}.png" alt="{{speaker}}">
+    <h2>{{speaker}}</h2>
     <div class='ponencia'>
       Nos habló de
       <div class='titulo'>"{{talk}}"</div>
@@ -36,5 +41,6 @@
       60%
       <div class='wat'>#hot, 438743 tweets</div>
     </div>
-	</li>
+  </li>
 </template>
+
