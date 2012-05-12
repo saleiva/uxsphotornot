@@ -33,8 +33,9 @@ twit.stream('statuses/filter', {'track':'#uxsp, #uxspain'},
 			t = data.text;
 			d = data.created_at;
 			r = data.retweet_count;
+			id = data.id_str;
 
-			cartodb_private_query = "INSERT INTO uxtweets (text,retweet_count,d) VALUES ('"+t+"', '"+r+"', '"+d+"')"
+			cartodb_private_query = "INSERT INTO uxtweets (text,retweet_count,d,tweet_id) VALUES ('"+t+"', '"+r+"', '"+d+"', '"+id+"')"
 			oa.getOAuthRequestToken(function(error, request_key, request_secret, results){
 				if(error){
 					sys.puts('error :' + error);
