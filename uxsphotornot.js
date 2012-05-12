@@ -1,5 +1,4 @@
 Speakers = new Meteor.Collection("speakers");
-Hotness = [];
 
 if (Meteor.is_client) {
 	Template.speakerlist.speakers = function () {
@@ -7,13 +6,24 @@ if (Meteor.is_client) {
   };
 
 	Template.speakerlist.set_hotness = function () {
-		console.log(Hotness);
+		// console.log(Hotness);
+		var speakers = Speakers.find({});
+		var count = 0;
+		speakers.forEach(function (speaker) {
+		  console.log(speaker.speaker+ " " + speaker.total_tweet);
+		  count += 1;
+		});
+		
 	}
 
 	Template.speaker.counter = function () {
+		var img = this.img;
 		var count = $.getJSON("https://uxspain.cartodb.com/api/v2/sql?q=SELECT * FROM uxtweets_copy WHERE \"d\" > '"+ this.date +" "+ this.from +"' and \"d\" < '"+ this.date +" "+ this.to +"' order by \"d\" ASC", function(data) {
-			Hotness.push(data.total_rows);
-			Template.speakerlist.set_hotness();
+			Speakers.update({img: img},
+				{$addToSet: {total_tweet: data.total_rows}},
+				{multi: true}
+			);
+			// Template.speakerlist.set_hotness();
 		});
 	};
   
