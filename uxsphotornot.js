@@ -6,24 +6,17 @@ if (Meteor.is_client) {
 		return Speakers.find({}, {sort: {date: 1, from: 1}});
   };
 
+	Template.speakerlist.set_hotness = function () {
+		console.log(Hotness);
+	}
+
 	Template.speaker.counter = function () {
-		
 		var count = $.getJSON("https://uxspain.cartodb.com/api/v2/sql?q=SELECT * FROM uxtweets_copy WHERE \"d\" > '"+ this.date +" "+ this.from +"' and \"d\" < '"+ this.date +" "+ this.to +"' order by \"d\" ASC", function(data) {
-			console.log(data.total_rows);
+			Hotness.push(data.total_rows);
+			Template.speakerlist.set_hotness();
 		});
 	};
   
-  // Template.hello.greeting = function () {
-  //   return "Welcome to uxsphotornot.";
-  // };
-  // 
-  // Template.hello.events = {
-  //   'click input' : function () {
-  //     // template data, if any, is available in 'this'
-  //     if (typeof console !== 'undefined')
-  //       console.log("You pressed the button");
-  //   }
-  // };
 }
 
 if (Meteor.is_server) {
